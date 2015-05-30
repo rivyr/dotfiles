@@ -29,3 +29,27 @@
 [submodule "vim-bracketed-paste"]
     path = vim/bundle/vim-markdown-folding
     url = https://github.com/nelstrom/vim-markdown-folding
+
+[submodule "tmux-copycat"]
+    path = tmux/plugins/tmux-copycat
+    url = https://github.com/tmux-plugins/tmux-copycat
+
+[submodule "tmux-resurrect"]
+    path = tmux/plugins/tmux-resurrect
+    url = https://git::@github.com/tmux-plugins/tmux-resurrect
+
+[submodule "tmux-sensible"]
+    path = tmux/plugins/tmux-sensible
+    url = https://git::@github.com/tmux-plugins/tmux-sensible
+
+[submodule "tmux-sessionist"]
+    path = tmux/plugins/tmux-sessionist
+    url = https://git::@github.com/tmux-plugins/tmux-sessionist
+
+[submodule "tmux-yank"]
+    path = tmux/plugins/tmux-yank
+    url = https://git::@github.com/tmux-plugins/tmux-yank
+
+[submodule "tpm"]
+    path = tmux/plugins/tpm
+    url = https://github.com/tmux-plugins/tpm
