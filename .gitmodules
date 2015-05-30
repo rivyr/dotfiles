@@ -22,6 +22,10 @@
     path = vim/bundle/vim-airline 
     url = https://github.com/bling/vim-airline
 
+[submodule "vim-fugitive"]
+    path = vim/bundle/vim-fugitive
+    url = https://github.com/tpope/vim-fugitive
+
 [submodule "vim-bracketed-paste"]
     path = vim/bundle/vim-bracketed-paste
     url = https://github.com/ConradIrwin/vim-bracketed-paste
@@ -53,3 +57,4 @@
 [submodule "tpm"]
     path = tmux/plugins/tpm
     url = https://github.com/tmux-plugins/tpm
+

@@ -35,6 +35,9 @@ let g:airline_powerline_fonts=1
 " promptline
 Bundle 'edkolev/promptline.vim'
 "
+" fugitive
+Plugin 'tpope/vim-fugitive'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
