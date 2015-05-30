@@ -1,0 +1,5 @@
+[user]
+	name = rivyr
+	email = sgreeley@gmail.com
+[core]
+	excludesfile = /Users/sgreeley/dotfiles/.gitignore
