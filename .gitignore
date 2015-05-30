@@ -1,0 +1,4 @@
+## Ignore vim temp files
+##vim/view/~=+.*
+vim/view
+vim/.netrwhist
