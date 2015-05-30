@@ -107,7 +107,7 @@ vnoremap <tab> %
 nnoremap ; :
 nnoremap q; q:
 
-nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+nnoremap <leader>ev <C-w><C-v><C-l>:e ~/.dotfiles/vimrc<cr>
 
 set wrap
 set textwidth=79
