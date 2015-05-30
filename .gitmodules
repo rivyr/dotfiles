@@ -1,3 +1,31 @@
 [submodule "dotbot"]
 	path = dotbot
-	url = https://github.com/anishathalye/dotbot
+    url = https://github.com/anishathalye/dotbot
+
+[submodule "Vundle"]
+    path = vim/bundle/Vundle.vim
+    url = https://github.com/gmarik/Vundle.vim.git
+
+[submodule "nerdtree"]
+    path = vim/bundle/nerdtree
+    url = https://github.com/scrooloose/nerdtree
+
+[submodule "promptline"]
+    path = vim/bundle/promptline.vim
+    url = https://github.com/edkolev/promptline.vim
+
+[submodule "rainbow"]
+    path = vim/bundle/rainbow 
+    url = https://github.com/luochen1990/rainbow
+
+[submodule "rainbow"]
+    path = vim/bundle/vim-airline 
+    url = https://github.com/bling/vim-airline
+
+[submodule "vim-bracketed-paste"]
+    path = vim/bundle/vim-bracketed-paste
+    url = https://github.com/ConradIrwin/vim-bracketed-paste
+
+[submodule "vim-bracketed-paste"]
+    path = vim/bundle/vim-markdown-folding
+    url = https://github.com/nelstrom/vim-markdown-folding
