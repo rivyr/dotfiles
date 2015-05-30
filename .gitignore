@@ -2,3 +2,6 @@
 ##vim/view/~=+.*
 vim/view
 vim/.netrwhist
+*~
+*.swp
+*.swo
