@@ -1,0 +1,1 @@
+bexec-v0.8.vmb: call delete('/Users/sgreeley/.vim/plugin/bexec.vim')|call delete('/Users/sgreeley/.vim/doc/bexec.txt')
