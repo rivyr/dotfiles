@@ -22,10 +22,6 @@
     path = vim/bundle/vim-fugitive
     url = https://github.com/tpope/vim-fugitive
 
-[submodule "vim-bracketed-paste"]
-    path = vim/bundle/vim-bracketed-paste
-    url = https://github.com/ConradIrwin/vim-bracketed-paste
-
 [submodule "vim-markdown-folding"]
     path = vim/bundle/vim-markdown-folding
     url = https://github.com/nelstrom/vim-markdown-folding
