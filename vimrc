@@ -6,6 +6,10 @@ colorscheme badwolf
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+if has("autocmd")
+    filetype plugin indent on
+endif
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -24,8 +28,9 @@ Plugin 'ConradIrwin/vim-bracketed-paste'
 
 " nerdtree
 Plugin 'scrooloose/nerdtree.git'
-"
-"Plugin 'nelstrom/vim-markdown-folding'
+
+" nelstrom"
+Plugin 'nelstrom/vim-markdown-folding'
 
 " airline
 Plugin 'bling/vim-airline'
