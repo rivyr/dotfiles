@@ -14,10 +14,6 @@
     path = vim/bundle/promptline.vim
     url = https://github.com/edkolev/promptline.vim
 
-[submodule "rainbow"]
-    path = vim/bundle/rainbow 
-    url = https://github.com/luochen1990/rainbow
-
 [submodule "airline"]
     path = vim/bundle/vim-airline 
     url = https://github.com/bling/vim-airline
@@ -61,6 +57,7 @@
 [submodule "vim/bundle/rainbow"]
 	path = vim/bundle/rainbow
 	url = https://github.com/luochen1990/rainbow
+
 [submodule "vim/bundle/vim-bracketed-paste"]
 	path = vim/bundle/vim-bracketed-paste
 	url = https://github.com/ConradIrwin/vim-bracketed-paste
