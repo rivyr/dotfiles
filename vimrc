@@ -42,6 +42,9 @@ Bundle 'edkolev/promptline.vim'
 "
 " fugitive
 Plugin 'tpope/vim-fugitive'
+"
+" fugitive
+Plugin 'tpope/vim-commentary'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
