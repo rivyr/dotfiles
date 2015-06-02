@@ -31,6 +31,10 @@ Plugin 'scrooloose/nerdtree.git'
 
 " nelstrom"
 Plugin 'nelstrom/vim-markdown-folding'
+"
+" slime"
+Plugin 'jpalardy/vim-slime'
+let g:slime_target = "tmux"
 
 " airline
 Plugin 'bling/vim-airline'
