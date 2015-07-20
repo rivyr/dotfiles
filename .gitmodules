@@ -64,3 +64,12 @@
 [submodule "vim/bundle/vim-slime"]
 	path = vim/bundle/vim-slime
 	url = https://github.com/jpalardy/vim-slime
+[submodule "vim/bundle/jedi"]
+	path = vim/bundle/jedi
+	url = https://github.com/davidhalter/jedi-vim
+[submodule "vim/bundle/jedi-vim"]
+	path = vim/bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim
+[submodule "vim/bundle/supertab"]
+	path = vim/bundle/supertab
+	url = https://github.com/ervandew/supertab
