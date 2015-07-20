@@ -2,6 +2,7 @@ syntax on
 filetype plugin indent on
 
 colorscheme badwolf
+"colorscheme darktango
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -46,6 +47,14 @@ Bundle 'edkolev/promptline.vim'
 "
 " fugitive
 Plugin 'tpope/vim-fugitive'
+"
+" supertab
+Plugin 'ervandew/supertab'
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
+"jedi
+Plugin 'davidhalter/jedi-vim'
+autocmd FileType python setlocal completeopt-=preview
 "
 " fugitive
 Plugin 'tpope/vim-commentary'

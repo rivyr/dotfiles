@@ -9,7 +9,7 @@ setopt complete_aliases
 ZSH_THEME="quell"
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -24,7 +24,7 @@ ZSH_THEME="quell"
 DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
- ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -66,7 +66,7 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch x86_64"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -76,9 +76,66 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Use vim cli mode
+bindkey -v
+#
+# helper for setting color including all kinds of terminals
+set_prompt_color() {
+    if [[ $TERM = "linux" ]]; then
+       # nothing
+    elif [[ $TMUX != '' ]]; then
+        printf '\033Ptmux;\033\033]12;%b\007\033\\' "$1"
+    else
+        echo -ne "\033]12;$1\007"
+    fi
+}
+
+# change cursor color basing on vi mode
+zle-keymap-select () {
+    if [ $KEYMAP = vicmd ]; then
+        set_prompt_color $COMMAND_PROMPT
+    else
+        set_prompt_color $INSERT_PROMPT
+    fi
+}
+
+zle-line-finish() {
+    set_prompt_color $INSERT_PROMPT
+}
+
+zle-line-init () {
+    zle -K viins
+    set_prompt_color $INSERT_PROMPT
+}
+
+zle -N zle-keymap-select
+zle -N zle-line-init
+zle -N zle-line-finish
+
+bindkey '^P' up-history
+bindkey '^N' down-history
+
+# backspace and ^h working even after
+# returning from command mode
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+#
+# # ctrl-w removed word backwards
+bindkey '^w' backward-kill-word
+
+# ctrl-r starts searching history backward
+bindkey '^r' history-incremental-search-backward
+
+#Aliases
 alias zs="source ~/.zshrc"
+alias vi="vim"
 alias viz="vi ~/.zshrc"
 alias pypro="python -m cProfile"
+alias grep="grep -a"
+
+export KEYTIMEOUT=10
+#
+# urxvt (and family) accepts even #RRGGBB
+INSERT_PROMPT="gray"
+COMMAND_PROMPT="red"
+
