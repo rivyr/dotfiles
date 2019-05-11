@@ -7,3 +7,5 @@
     :n "C-j"   #'evil-window-down
     :n "C-k"   #'evil-window-up
     :n "C-l"   #'evil-window-right)
+
+;;TODO: fix other missing spacemac equivs
