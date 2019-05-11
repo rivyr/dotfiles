@@ -366,6 +366,7 @@ you should place your code here."
         starttls-use-gnutls t
         smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
         smtpmail-auth-credentials
+        ;; authinfo format 'machine smtp.gmail.com login USERNAME port 587 password SECRET'
         (expand-file-name "~/.authinfo")
         smtpmail-default-smtp-server "smtp.gmail.com"
         smtpmail-smtp-server "smtp.gmail.com"
