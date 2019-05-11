@@ -43,7 +43,7 @@ values."
      helm
      auto-completion
      better-defaults
-     macs-lisp
+     emacs-lisp
      git
      markdown
      org
