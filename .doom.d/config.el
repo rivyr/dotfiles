@@ -2,10 +2,10 @@
 
 ;; Place your private configuration here
 (map!
+    ;;TODO: fix other missing spacemac equivs
     ;; easier window nav
     :n "C-h"   #'evil-window-left
     :n "C-j"   #'evil-window-down
     :n "C-k"   #'evil-window-up
     :n "C-l"   #'evil-window-right)
 
-;;TODO: fix other missing spacemac equivs
