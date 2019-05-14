@@ -54,3 +54,6 @@
     evil-escape-excluded-major-modes '(neotree-mode treemacs-mode)
     evil-escape-key-sequence "jk"
     evil-escape-delay 0.25)
+
+;;display relative line numbers as default
+(setq display-line-numbers-type 'relative)
