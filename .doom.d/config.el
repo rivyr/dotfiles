@@ -22,22 +22,21 @@
 
 ;;fix s not saving in agenda mode
 (map! :keymap 'org-agenda-mode-map
-        :nm "s" #'org-save-all-org-buffers)
-
-;;allow q to quit agenda window
-(map! :keymap 'org-agenda-mode-map
-        :nm "q" #'quit-window)
+      :nm "s" #'org-save-all-org-buffers)
 
 ;;make SPC-o-a go right to agenda list
 (map! :leader
       :prefix "o"
       :n "a" #'org-agenda-list)
 
-
 ;;make SPC-s save
 (map! :leader
       :n "s" #'save-buffer)
-;; -- end keybinds
+
+;; unset q macro bind
+(map! :nmi "q" nil)
+
+;; end keybinds
 
 
 ;; other settings
