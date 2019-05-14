@@ -61,7 +61,7 @@
        vc                ; version-control and Emacs, sitting in a tree
 
        :tools
-       ;;ansible
+       ansible
        ;;debugger          ; FIXME stepping through code, to help you add bugs
        ;;direnv
        ;;docker
@@ -90,7 +90,7 @@
        :lang
        ;;agda              ; types of types of types of types...
        ;;assembly          ; assembly for fun or debugging
-       cc                ; C/C++/Obj-C madness
+       ;; cc                ; C/C++/Obj-C madness
        ;;clojure           ; java with a lisp
        ;;common-lisp       ; if you've seen one lisp, you've seen them all
        ;;coq               ; proofs-as-programs
@@ -173,4 +173,8 @@
        ;; provides a Spacemacs-inspired keybinding scheme and a smartparens
        ;; config. Use it as a reference for your own modules.
        (default +bindings +smartparens))
+
+;;start maximized
 (add-hook 'window-setup-hook 'toggle-frame-maximized t)
+;;auto add org files
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
