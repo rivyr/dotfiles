@@ -24,6 +24,37 @@
 (map! :keymap 'org-agenda-mode-map
       :nm "s" #'org-save-all-org-buffers)
 
+(map! :keymap 'org-agenda-mode-map
+      :nm "TAB" #'org-agenda-goto)
+
+
+;;override agenda minor mode keys since minor mode is borked 90% of the time anyway
+(map! :keymap 'org-agenda-mode-map
+      :leader
+      :prefix "m"
+      :nm "s" 'org-agenda-schedule)
+
+(map! :keymap 'org-agenda-mode-map
+      :leader
+      :prefix "m"
+      :nm "d" 'org-agenda-deadline)
+
+(map! :keymap 'org-agenda-mode-map
+      :leader
+      :prefix "m"
+      :nm "q" 'org-agenda-set-tags)
+
+(map! :keymap 'org-agenda-mode-map
+      :leader
+      :prefix "m"
+      :nm "r" 'org-agenda-refile)
+
+(map! :keymap 'org-agenda-mode-map
+      :leader
+      :prefix "m"
+      :nm "t" 'org-agenda-todo)
+
+
 ;;make SPC-o-a go right to agenda list
 (map! :leader
       :prefix "o"
