@@ -132,6 +132,7 @@ alias vi="vim"
 alias viz="vi ~/.zshrc"
 alias pypro="python -m cProfile"
 alias grep="grep -a"
+alias nh="ssh nethack@alt.org"
 
 export KEYTIMEOUT=10
 #

@@ -60,6 +60,12 @@
       :prefix "o"
       :n "a" #'org-agenda-list)
 
+;;make SPC-o-t go right to todo list
+(map! :leader
+      :prefix "o"
+      :n "t" #'org-todo-list)
+
+
 ;;make SPC-s save
 (map! :leader
       :n "s" #'save-buffer)
