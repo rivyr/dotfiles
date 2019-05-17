@@ -11,6 +11,7 @@
     ;; :m  motion
     ;; :r  replace
 
+
 ;; org mode limit refile
 (setq org-refile-targets '((nil :maxlevel . 9)
                                 (org-agenda-files :maxlevel . 9)))
