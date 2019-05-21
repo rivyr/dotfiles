@@ -32,35 +32,35 @@
 (map! :keymap 'org-agenda-mode-map
       :nm "s" #'org-save-all-org-buffers)
 
-(map! :keymap 'org-agenda-mode-map
-      :nm "TAB" #'org-agenda-goto)
+;; (map! :keymap 'org-agenda-mode-map
+;;      :nm "TAB" #'org-agenda-goto)
 
 
 ;;override agenda minor mode keys since minor mode is borked 90% of the time anyway
-(map! :keymap 'org-agenda-mode-map
-      :leader
-      :prefix "m"
-      :nm "s" 'org-agenda-schedule)
+;; (map! :keymap 'org-agenda-mode-map
+;;       :leader
+;;       :prefix "m"
+;;       :nm "s" 'org-agenda-schedule)
 
-(map! :keymap 'org-agenda-mode-map
-      :leader
-      :prefix "m"
-      :nm "d" 'org-agenda-deadline)
+;; (map! :keymap 'org-agenda-mode-map
+;;       :leader
+;;       :prefix "m"
+;;       :nm "d" 'org-agenda-deadline)
 
-(map! :keymap 'org-agenda-mode-map
-      :leader
-      :prefix "m"
-      :nm "q" 'org-agenda-set-tags)
+;; (map! :keymap 'org-agenda-mode-map
+;;       :leader
+;;       :prefix "m"
+;;       :nm "q" 'org-agenda-set-tags)
 
-(map! :keymap 'org-agenda-mode-map
-      :leader
-      :prefix "m"
-      :nm "r" 'org-agenda-refile)
+;; (map! :keymap 'org-agenda-mode-map
+;;       :leader
+;;       :prefix "m"
+;;       :nm "r" 'org-agenda-refile)
 
-(map! :keymap 'org-agenda-mode-map
-      :leader
-      :prefix "m"
-      :nm "t" 'org-agenda-todo)
+;; (map! :keymap 'org-agenda-mode-map
+;;       :leader
+;;       :prefix "m"
+;;        :nm "t" 'org-agenda-todo)
 
 
 ;;make SPC-o-a go right to agenda list
@@ -75,13 +75,19 @@
 
 
 ;;make SPC-s save
-(map! :leader
-      :n "s" #'save-buffer)
+;; (map! :leader
+;;       :n "s" #'save-buffer)
 
 ;; unset q macro bind
 (map! :nmi "q" nil)
 
+
 ;; end keybinds
+
+
+;; auto complete
+(setq company-idle-delay 0.2
+      company-minimum-prefix-length 3)
 
 
 ;; other settings
@@ -102,3 +108,25 @@
 
 ;;display relative line numbers as default
 (setq display-line-numbers-type 'relative)
+
+;; rust stuff
+;; rust path
+(add-to-list 'exec-path "/Users/sgreeley/.cargo/bin/")
+
+;;rust src
+(setq racer-rust-src-path "/Users/sgreeley/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src")
+;; rust flycheck
+(add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
+(setq comment-multi-line t)
+
+(add-hook 'racer-mode-hook #'company-mode)
+
+;;(require 'rust-mode)
+(setq racer-complete-insert-argument-placeholders 1)
+(setq rust-format-on-save t)
+(map! :keymap 'rust-mode-map
+      :i "TAB" #'company-indent-or-complete-common)
+;; end rust stuff
+
+;; comments
+(setq +evil-want-o/O-to-continue-comments nil)
