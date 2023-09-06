@@ -14,3 +14,4 @@ require('lualine').setup {
         -- ... the rest of your lualine config
     }
 }
+
