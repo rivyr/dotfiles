@@ -1,7 +1,7 @@
 if status is-interactive
     # rustup shell setup
     set -x PATH "$HOME/.cargo/bin" $PATH
-    
+
     #claude shell setup
     set -x PATH "$HOME/.npm-global/bin" $PATH
 
@@ -20,4 +20,7 @@ if status is-interactive
     alias cg="cd /home/sgreeley/.local/share/chezmoi"
     alias top="btm"
     alias z="zoxide"
+    alias f='fzf --preview '\''bat --color=always --style=numbers --line-range=:500 {}'\'
+    alias fe='fd --type f --hidden --exclude .git | fzf | xargs nvim'
+    alias df="dysk"
 end

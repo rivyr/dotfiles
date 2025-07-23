@@ -114,6 +114,7 @@ alias cz="chezmoi"
 alias f="fd --type f | fzf | sed 's/\ /\\\ /g' | xargs nvim"
 alias k="kubectl"
 alias s="switcher"
+alias df="dysk"
 ##imports and misc personal fixes
 eval `dircolors ~/.config/bliss.dircolors`
 . "$HOME/.cargo/env"
