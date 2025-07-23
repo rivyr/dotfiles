@@ -154,10 +154,11 @@ eval $(dircolors ~/.config/bliss.dircolors)
 
 eval "$(fzf --bash)"
 
-
 . "$HOME/.atuin/bin/env"
-
 
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 
 eval "$(atuin init bash)"
+
+export CARAPACE_BRIDGES='zsh,fish,bash' # optional
+source <(carapace _carapace)

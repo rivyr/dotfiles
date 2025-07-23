@@ -112,6 +112,8 @@ alias ls="eza"
 alias top="btm"
 alias cz="chezmoi"
 alias f="fd --type f | fzf | sed 's/\ /\\\ /g' | xargs nvim"
+alias k="kubectl"
+alias s="switcher"
 ##imports and misc personal fixes
 eval `dircolors ~/.config/bliss.dircolors`
 . "$HOME/.cargo/env"
@@ -129,3 +131,9 @@ _fzf_compgen_path() {
 . "$HOME/.atuin/bin/env"
 }
 eval "$(~/.atuin/bin/atuin init zsh)"
+eval "$(starship init zsh)"
+
+export CARAPACE_BRIDGES='zsh,fish,bash' # optional
+zstyle ':completion:*:git:*' group-order 'main commands' 'alias commands' 'external commands'
+#zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)
