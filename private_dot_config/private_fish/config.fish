@@ -19,7 +19,6 @@ if status is-interactive
     alias cz="chezmoi"
     alias cg="cd /home/sgreeley/.local/share/chezmoi"
     alias top="btm"
-    alias z="zoxide"
     alias f='fzf --preview '\''bat --color=always --style=numbers --line-range=:500 {}'\'
     alias fe='fd --type f --hidden --exclude .git | fzf | xargs nvim'
     alias df="dysk"
